@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>DropBy Solution</title>
+
+  <link href="css/style.css" rel="stylesheet">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+  <!-- Latest compiled JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  <!--angularjs-->
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+<body ng-app="myApp" ng-controller="myCtrl">
+
+  <nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
+      <div class="container-fluid">
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-2">
+                  <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
+              </button>
+              <!-- Company Logo Here! -->
+              <a href="#page-top"><img src="images/logo.png" class="navbar-brand"></a>
+              <a class="navbar-brand page-scroll" href="#page-top">DropBy Solution</a>
+          </div>
+
+
+          <!-- Collect the nav links, forms, and other content for toggling -->
+          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+              <ul class="nav navbar-nav navbar-right">
+                  <li>
+                      <a class="page-scroll" href="#page-top">Home</a>
+                  <li>
+                      <a class="page-scroll" href="#about">About</a>
+                  </li>
+                  <li>
+                      <a class="page-scroll" href="#services">DropBy your package</a>
+                  </li>
+                  <li>
+                      <a class="page-scroll" href="#contact">Contact</a>
+                  </li>
+                  <li>
+                      <a class="page-scroll" href="#LogIn" id="navlogin">Log In</a>
+                  </li>
+              </ul>
+          </div>
+          <!-- /.navbar-collapse -->
+      </div>
+      <!-- /.container-fluid -->
+  </nav>
+  <!--
+  <div class="container-fluid">
+    <img style="width:100%;height:400px;position:relative" src ="images/header.jpg">
+  </div>
+-->
+
+  <br><br><br><br>
+    <div class="container-fluid">
+    <div class="row">
+      <div class="col-sm-12" id="mainposter">
+        <!--
+        <h3>How it works?</h3>
+        <p>邮费太贵？等待包裹时间太长？</p>
+        <p>...........................</p>
+        <p>blah blah blah</p>
+      -->
+      <img src="images/tit1.png" style="width:100%">
+      </div>
+      <div class="col-sm-0" id="sidelogin" style="display:none;">
+        <!--log in form-->
+        <!--Log in Form-->
+        <div class="container-fluid" style="background-color:#69F0AE;height:auto;"
+        id="signinform">
+          <h2 style="color:#fff">Log In</h2>
+          <form>
+         <div class="form-group">
+         <label for="user">User:</label>
+         <div class="input-group">
+         <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+         <input id="login-username" type="text" class="form-control" name="username" value="" placeholder="username or email">
+         </div>
+         </div>
+         <div class="form-group">
+         <label for="pwd">Password:</label>
+         <div  class="input-group">
+         <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+         <input id="login-password" type="password" class="form-control" name="password" placeholder="password">
+         </div>
+         </div>
+         <div class="checkbox">
+         <label><input type="checkbox"> Remember me</label>
+         </div>
+         <button type="submit" class="btn btn-default">Log in</button>
+         <button type="submit" class="btn btn-primary">Log in with Facebook</button>
+         <br><br>
+         <div class="form-group">
+           <div class="col-md-12 control">
+             <div style="border-top: 1px solid#888; padding-top:15px; font-size:85%" >
+               Don't have an account?
+               <a href="#" onClick="$('#signinform').hide(); $('#signupform').show();">
+                 Sign Up Here
+               </a>
+             </div>
+           </div>
+         </div>
+         </form>
+         <br><br>
+        </div>
+        <!--Log in Form-->
+        <!--Log in Form-->
+
+        <!--Sign Up Form-->
+        <!--Sign Up Form-->
+        <!--Sign Up Form-->
+        <div class="container-fluid" style="background-color:#40C4FF;height:auto;display:none"
+        id="signupform">
+          <h2 style="color:#fff">Sign Up</h2>
+          <form action="/users/register" method="post">
+         <div class="form-group">
+           <label for="user">User:</label>
+           <input id="signup-username" type="text" class="form-control" name="username" value="" placeholder="username">
+         </div>
+
+         <div class="form-group">
+           <label for="email">Email:</label>
+           <input id="signup-email" type="text" class="form-control" name="email" value="" placeholder="email">
+         </div>
+
+         <div class="form-group">
+         <label for="pwd">Password:</label>
+         <input type="password" class="form-control" id="pwd" name="password" placeholder="password">
+         </div>
+
+         <div class="form-group">
+         <label for="pwd">Retype Password:</label>
+         <input type="password" class="form-control" id="pwd" placeholder="retype password">
+         </div>
+         <br>
+         <button type="submit" class="btn btn-default">Submit</button>
+         <button type="submit" class="btn btn-primary">Sign up with Facebook</button>
+         <br><br>
+         <div class="form-group">
+           <div class="col-md-12 control">
+             <div style="border-top: 1px solid#888; padding-top:15px; font-size:85%" >
+                 Have an account already?
+               <a href="#" onClick="$('#signinform').show(); $('#signupform').hide()">
+                 Log in Here
+               </a>
+             </div>
+           </div>
+         </div>
+         <br><br>
+         </form>
+         </div>
+
+        <!--Sign Up Form-->
+        <!--Sign Up Form-->
+
+      </div>
+    </div>
+    </div>
+
+    <section id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 text-center">
+                <h2 class="section-heading">Let's Get In Touch!</h2>
+                <hr class="primary">
+                <p>Ready to start your next project with us? That's great! Give us a call or send us an email and we will get back to you as soon as possible!</p>
+            </div>
+            <div class="col-lg-4 col-lg-offset-2 text-center">
+                <i class="fa fa-phone fa-3x sr-contact"></i>
+                <p>123-456-6789</p>
+            </div>
+            <div class="col-lg-4 text-center">
+                <i class="fa fa-envelope-o fa-3x sr-contact"></i>
+                <p><a href="mailto:your-email@your-domain.com">feedback@startbootstrap.com</a></p>
+            </div>
+        </div>
+    </div>
+    </section>
+
+
+<script>
+$(document).ready(function(){
+
+  $("#navlogin").click(function(){
+    $("#sidelogin").toggleClass("col-sm-4");
+    $("#sidelogin").toggle();
+    $("#mainposter").toggleClass("col-sm-12");
+    $("#mainposter").toggleClass("col-sm-8");
+  });
+});
+
+var app = angular.module('myApp', []);
+app.controller('myCtrl', function($scope) {
+    $scope.count = 0;
+    $scope.myFunction = function() {
+        $scope.count++;
+        console.log($scope.count);
+    }
+});
+
+</script>
+</body>
+
+</html>
